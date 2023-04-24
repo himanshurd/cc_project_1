@@ -1,0 +1,24 @@
+{
+  "name": "cc_project_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himanshurd/cc_project_1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himanshurd/cc_project_1.git/issues"
+  },
+  "homepage": "https://github.com/himanshurd/cc_project_1.git#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

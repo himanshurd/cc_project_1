@@ -1,0 +1,48 @@
+Add a business 
+ curl -v -X POST -H "Content-Type: application/json" -d '{  "name": "Himanshu",                                                                                                                              
+  "address": "1233 SE",
+  "city": "Ohio",
+  "state": "OR",
+  "zip": "97702",
+  "phone": "541-908-2285",
+  "category": "Gas Pump",
+  "subcategories": ["Petrol"],
+  "website": "https://arco.com",
+  "email": "HimanshuDhir@gmail.com"}' \http://localhost:3000/businesses
+
+Show business with id 
+curl http://localhost:3000/businesses/1
+
+Modify a business 
+curl -v -X PUT -H "Content-Type: application/json" \
+-d '{"name":"Dhir General Store'\''s Grocery","address":"78 se.","city":"Bend","state":"OR","zip":"97702","phone":"541-222-1234","category":"Grocery Store","subcategories":["Wheat","Pulses"],"website":"http://store.com","email":"store@example.com"}' \
+http://localhost:3000/businesses/0
+
+Delete a business 
+curl -X DELETE http://localhost:3000/businesses/2
+
+Add a review
+curl -X POST -H "Content-Type: application/json" \
+-d '{"starRating": 4, "dollarRating": 2, "review": "Easy to find everything!!"}' \
+http://localhost:3000/reviews
+
+Update a review 
+curl -v -X PUT -H "Content-Type: application/json" -d '{"starRating":"4","dollarRating":"2","review":"This is an updated review"}' http://localhost:3000/reviews/0
+
+Delete review 
+curl -X DELETE http://localhost:3000/reviews/1
+
+Upload an image 
+curl -X POST -H "Content-Type: application/json" -d '{"imageFile": "/text.jpg", "caption": " hit the spot!"}' http://localhost:3000/photos
+
+Modify an existing photo
+curl -X PUT -H "Content-Type: application/json" -d '{"imageFile": "/new_example.jpg", "caption": "It'\''s fixed!"}' http://localhost:3000/photos/0
+
+List of all the photos they've uploaded
+curl http://localhost:3000/photos
+
+List of all the businesses they own
+curl -X GET http://localhost:3000/photos/0/businesses?page=1
+
+List of all the reviews they've written
+curl -X GET http://localhost:3000/photos/2/reviews?page=2
